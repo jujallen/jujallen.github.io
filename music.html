@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<!-- 1. add an Event Listener to the document 
+
+	strategy #1:
+	2. create a variable that acts like a switch storing value of any binary (e.g. "playing" or "paused" || true or false) 
+	3. and based on that play or pause the audion 
+
+	strategy #2:
+	2. create a counter variable that counts # of clicks
+	3. if the counter is odd, play the audio
+	4. if the counter is even, pause the audio --> 
+
+<script type="text/javascript">
+	
+		let counter = 0;
+
+	document.addEventListener("click", 
+
+		function(){
+			
+			console.log(counter)
+			counter = counter+1
+
+			if (counter%2 == 1)
+				{document.body.style.backgroundColor = "lightBlue"}
+			
+			if (counter%2 == 0)
+				{document.body.style.backgroundColor = "hotPink"}
+			
+		}
+		)
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
