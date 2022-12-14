@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<style type="text/css">
+
+
+	#taylor{
+			height: 600px;
+			width: 600px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			}
+
+	#fearless{
+		height: 400px;
+		width: 400px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		
+
+	}
+
+	#text{
+		margin: 20px;
+		background-color:#F5D0ED;
+		font-family: 'Courgette', cursive;
+		text-decoration: none;
+				color:#FD7EAC;
+		font-size: 35px;
+
+	}
+
+</style>
+
+</head>
+<body>
+	
+	<center>
+		<div id="text">Click and guess the taylor song playing!!</div>
+		<div id="taylor"></div>
+
+
+	<audio src="picturetoburn.m4a" id="song"></audio>
+	</center>
+	
+
+	<script type="text/javascript">
+		
+		var clicks =0;
+		let taylor = document.getElementById("taylor");
+		let song = document.getElementById("song");
+
+		taylor.addEventListener("click", function(){
+			clicks = clicks+1
+			console.log(clicks)
+
+			if (clicks%2 == 1){
+				taylor.style.backgroundImage = "url(https://i.pinimg.com/originals/b8/68/0a/b8680ac2a30a9dc9e93837d50b073612.gif)";
+				song.play()
+
+			} else if (clicks%2 ==0) {
+				document.body.style.backgroundImage = "url()"
+				song.pause()
+			}
+
+		
+		
+		}) 
+
+</script>
+
+<audio src="lovedyou.mp3" id="song2"></audio>
+<div id="fearless"></div>
+
+<script type="text/javascript">
+		
+		var clicks =0;
+		let fearless = document.getElementById("fearless");
+		let song2 = document.getElementById("song2");
+
+		fearless.addEventListener("click", function(){
+			clicks = clicks+1
+			console.log(clicks)
+
+			if (clicks%2 == 1){
+				fearless.style.backgroundImage = "url(https://i.pinimg.com/originals/2b/ef/15/2bef15b23021350a80b03c7cb63da2ac.gif)";
+				song.play()
+
+			} else if (clicks%2 ==0) {
+				document.body.style.backgroundImage = "url()"
+				song.pause()
+			}
+
+		
+		
+		
+		}) 
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+        h1{
+            font-family:;
+            font-size:;
+            color:;
+        }
+
+        p{
+            font-family: helvica;
+            font-size:;
+            color:hotpink;
+        }
+
+        .box{
+        width:100px;
+         height:200px;
+        display:inline-block;
+        margin:5px;
+        background-repeat:no-repeat;
+        border:1px; 
+
+        }
+
+        #square1{
+            width: 200px;
+            height: 200px;
+        }
+
+        #square3{
+            width: 180px;
+            height: 180px;
+        }
+
+        #square4{
+            width: 200px;
+            height: 200px;
+        }
+
+        #square5{
+            width: 200px;
+            height: 200px;
+
+        }
+
+#square6{
+            width: 200px;
+            height: 200px;
+
+        }
+
+        #square7{
+            width: 200px;
+            height: 200px;
+
+        }
+
+        #square9{
+            width: 250px;
+            height: 250px;
+
+        }
+
+        #square10{
+            width: 300px;
+            height: 300px;
+
+        }
+    </style>
+</head>
+<body>
+
+<p>my sqaure quilt! <p>
+
+
+<script type="text/javascript">
+
+
+    function makeSquare (x) {
+
+            var square = document.createElement('div');
+                        document.body.appendChild(square);
+            square.classList.add('box');
+
+            square.style.backgroundImage = "url(" + x + ".png)";
+
+            square.style.backgroundSize = "contain";
+            square.id = "square" + x;};
+
+//Below, is the for loop in which where the squares are actually made. This for loop is where the function above is actually called. It is called 14 times, (between the values of 0 and 15) and because the variable i is declared in the for loop and is then being passed to the makeSquare recipe, each time the function runs, i changes in value (+1). Thus, the attributes that involve the i change in value as well (eg. the id attribute changes to be whatever i was last time, plus 1.)//
+
+    for (var i = 0; i < 15; i=i+1) 
+    { makeSquare(i);}
+</script>
+</body>
+</html>
