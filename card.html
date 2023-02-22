@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style type="text/css">
+	
+		body{
+			background-color: #FFA8D5;
+			font-family: "Sofia", sans-serif;
+  			font-size: 30px;
+ 			text-shadow: 3px 3px 3px #ababab;
+ 			color: white;
+		}
+
+		#square{
+			width: 500px;
+			height: 500px;
+/*			position: absolute;
+*/			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		#text{
+			font-size: 20px;
+			color: white;
+
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<center>
+		
+			<p>Just because I love you!</p>
+
+			<div id="text">
+				dear mom,<br>
+				words cant even explain how much i love you. thank you for everything you do for me. over the past year, as i continue to get older, ive started to notice the smaller things you do for me. times like when i was younger and you would fly home from your business trips at every earliest hour in order to not miss a night with me. or anytime i would have friends over, in the morning, a beautiful brunch would be layed out on top the dining room table. and lastly, every night insuring that you hug me and at every moment remind me how much you love me. these small things ive noticed i take for granted. while this short list does not even come close to capturing every small kind act you do for me, know that they do not go unnoticed. you mean the world to me. while i know that valentines day is meant to be a day of recognizing your love for a certain person, i believe this shouldnt be limited to only one day. even if i dont tell you enough please know that my love for you reaches beyond the sky and beyond every star. our relationship and every moment we spend together is so incredibly special to me.
+				i love you mommy, 
+				julia
+
+				ps. scroll below and click the center of the screen for a suprise <3 
+			</div>
+		<div id="square"></div>
+	</center>
+
+
+<script type="text/javascript">
+	
+	var artwork = ["0.png", "1.png", "2.png","3.png","4.png","5.png","6.png", "7.png", "8.png","9.png","10.png","11.png", "12.png","13.png","14.png", "15.png", "16.png","17.png","18.png","19.png","20.png"]
+
+	document.addEventListener("click", function(){
+		
+		var number = Math.round(Math.random()*20)
+		console.log(number)
+
+		square.style.backgroundImage = "url(./mama/" + artwork[number]+")";
+
+	})
+</script>
+        
+
+</body>
+</html>

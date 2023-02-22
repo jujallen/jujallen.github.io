@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<title></title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
+body {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+  text-shadow: 3px 3px 3px #ababab;
+}
+</style>
+
+	<style type="text/css">
+		
+		body{
+		margin: 20px;
+		color:white;
+		font-family:;
+		font-size: 45px;
+	}
+	
+
+
+		/*#text{
+			font-size: 75px;*/
+
+
+		}
+
+		p{
+			font-size: 50px;
+		}
+
+
+		body{
+			background-color: #FF598D;
+		}
+
+		.hearto{
+			width: 50px;
+			height: 50px;
+			background-image: url(https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			z-index: -10;
+
+		}
+
+		#link{
+			font-size: 30px;
+			color:white;
+		}
+
+		#card{
+			z-index: 10;
+		}
+
+	</style>
+</head>
+
+
+<body>
+
+
+	<center>
+		<p>happy valentines day!</p>
+		<div id="text"></div>
+		<div id=square></div>
+	</center>
+
+<div id="link">
+<a href="card.html"><center>click here for a surprise!!</center></a>
+</div>
+
+<script type="text/javascript">
+	
+// 	var artwork = ["0.png", "1.png", "2.png","3.png","4.png","5.png","6.png", "7.png", "8.png","9.png"]
+
+// 	document.addEventListener("click", function(){
+		
+// 		var number = Math.round(Math.random()*9)
+// 		console.log(number)
+
+// })
+	
+
+	
+
+	document.addEventListener("mousemove", 
+
+		function makeHearts(event){
+		var hearts = document.createElement("div");
+		document.body.appendChild(hearts);
+		hearts.classList.add('hearto');
+		hearts.style.zIndex = "-10"
+
+
+		hearts.style.left = event.clientX + "px"
+		hearts.style.top = event.clientY + "px"
+
+		function disappear(){
+			hearts.classList.remove('hearto')
+		}
+
+		setTimeout(disappear, 200)
+	
+	})
+
+
+
+</script>
+</body>
+</html>

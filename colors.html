@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		
+		body{
+			background-color: rgb(250,100,200);
+		}
+		#image{
+			width: 400;
+			height: 400;
+			background-image: url();
+		}
+	
+	</style>
+</head>
+<body>
+
+<div id ="image"></div>
+	<script type="text/javascript">
+		
+		document.addEventListener
+			("mousemove", 
+			function(event){
+			console.log(event.clientX, event.clientY);
+
+			document.body.style.backgroundColor = "rgb("+ 100+event.clientX + ","+ 0 +"," +event.clientY/2+")";
+
+
+
+
+		})
+	</script>
+
+</body>
+</html>
