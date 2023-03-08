@@ -4,11 +4,15 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 
 <style type="text/css">
 	
 		body{
 			background-color: #FFA8D5;
+			 font-family: "Sofia", sans-serif;
+  			font-size: 30px;
+  			text-shadow: 3px 3px 3px #ababab;
 		}
 
 		.box{
@@ -21,26 +25,37 @@
 
         }
 
+        #square{
+			width: 500px;
+			height: 500px;
+/*			position: absolute;
+*/			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
 </style>
 
 </head>
 <body>
-	<script type="text/javascript">
+	<center>
+		<p>Just because I love you!</p>
+		<div id="text"></div>
+		<div id=square></div>
+	</center>
+
+
+<script type="text/javascript">
+	
+	var artwork = ["0.png", "1.png", "2.png","3.png","4.png","5.png","6.png", "7.png", "8.png","9.png","10.png","11.png","12.png","13.png","14.png","15.png","16.png","17.png","18.png","19.png","20.png"]
+
+	document.addEventListener("click", function(){
 		
-		 function makeSquare (x) {
+		var number = Math.round(Math.random()*20)
+		console.log(number)
 
-            var square = document.createElement('div');
-                        document.body.appendChild(square);
-            square.classList.add('box');
+		square.style.backgroundImage = "url(./mama/" + artwork[number]+")";
 
-            square.style.backgroundImage = "url(" + x + ".png)";
-
-            square.style.backgroundSize = "contain";
-            square.id = "square" + x;};
-
-
-    for (var i = 0; i < 15; i=i+1) 
-    { makeSquare(i);}
+	})
 
 	</script>
 
