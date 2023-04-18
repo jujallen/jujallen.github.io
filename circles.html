@@ -1,0 +1,59 @@
+<!-- Does every dot have a separate div coded or is there a function controlling the size, position, and color?
+ -->
+
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		
+	/*	body{
+   	border-radius: 50%;
+    background-image: radial-gradient(#FFA3C8 20%, #A0D9FF 20%);
+     background-size: 100px 100px;
+  height: 200px;
+  width: 100%;
+		}*/
+
+		#dot{
+				border-radius: 50%;
+				width: 20px;
+				height: 20px;
+				background-color: #FFA3C8;
+				background-color: rgb(33, 55, 67);
+				position: absolute;
+
+
+		}
+	
+	</style>
+</head>
+<body>
+
+<div id ="dot"></div>
+	<script type="text/javascript">
+		
+		document.addEventListener ("mousemove", 
+			function(event){
+			console.log(event.clientX, event.clientY);
+			dot.style.left = event.clientX - 20 +  "px";
+			dot.style.top = event.clientY - 20 + "px";
+
+
+		})
+
+			function changeColor (){
+				var x = Math.round(Math.random()*255)
+				var y = Math.round(Math.random()*255)
+				var z = Math.round(Math.random()*255)
+				dot.style.backgroundColor = "rgb("+ x + ","+ y +"," +z+")";
+			}
+
+			setInterval(changeColor, 100)
+	</script>
+
+</body>
+</html>

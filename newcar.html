@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		
+		body{
+			background-image: url(maze.jpeg);
+
+      
+		}
+
+		#move{
+			 margin:0;
+  			padding:0;
+  			background-image: url(t.png);
+  			height: 100px;
+  			width: 100px;
+  			background-size: contain;
+  			background-repeat: no-repeat;
+		}
+
+	</style>
+</head>
+<body>
+
+
+<div id='move'></div>
+
+<div id='background'></div>
+<script type="text/javascript">
+function place(id,x_pos, y_pos) {
+  var element = document.getElementById(id);
+  element.style.position = "absolute";
+  element.style.left = x_pos+'px';
+  element.style.top = y_pos+'px';
+}
+
+
+function update(){
+   document.addEventListener('keydown', keyPress);
+}
+  
+function keyPress(e) {
+  var x = e.keyCode;
+  
+  var move = document.getElementById("move").getBoundingClientRect();
+ 
+  var left = parseInt(move.left,10);
+  var top = parseInt(move.top,10)
+    
+  switch (x) {
+    case 37:
+     place('move', left -10,  top);
+      break;
+
+    case 39:
+   place('move', left+10,  top);
+      break;
+
+    case 38:
+    place('move', left,  top-10);
+      break;
+
+    case 40:
+     place('move', left,  top+10);
+      break;
+  }
+ // console.log(x);
+}
+update();
+
+</script>
+</body>
+</html>

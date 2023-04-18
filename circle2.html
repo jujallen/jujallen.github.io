@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<style type="text/css">
+
+	.dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+  transition: background-color 0.5s;
+}
+
+</style>
+
+</head>
+<body>
+<script type="text/javascript">
+	const dot = document.querySelector('.dot');
+
+const colors = ['#FF0000', '#FFA500', '#FFFF00', '#008000', '#0000FF', '#4B0082', '#EE82EE'];
+
+let currentColorIndex = 0;
+
+dot.addEventListener('mouseover', () => {
+  dot.style.backgroundColor = colors[currentColorIndex];
+  currentColorIndex = (currentColorIndex + 1) % colors.length;
+  const newDot = document.createElement('div');
+  newDot.classList.add('dot');
+  document.body.appendChild(newDot);
+});
+</script>
+
+
+</body>
+</html>
