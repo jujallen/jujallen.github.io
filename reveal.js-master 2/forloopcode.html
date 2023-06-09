@@ -1,0 +1,50 @@
+description:
+make a project that cycles through photos through using a for loop with a function that has a variable inside that will make 100 divs. I will later style those divs.
+
+1. make a function
+2. put a var w in the function
+3. add createElement in order to make divs when func is ran
+4. add a class list
+5. assign var numbers that will count i + 1 
+6. style each div by giving every photo png.(#0-100)
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		.digitals{
+			width: 100px;
+			height: 100px;
+			margin: 5px;
+			background-repeat: no-repeat;
+			background-color: blue;
+			background-size: contain;
+			display: inline-block;
+
+
+		}
+	</style>
+</head>
+
+<body>
+
+<script type="text/javascript">
+	function makeDigitals(){
+		var photo = document.createElement('div');
+		document.body.appendChild(photo)
+		photo.classList.add("digitals")
+
+	}
+
+	for (var i=0; i<100; i=i+1)
+	{
+		makeDigitals()
+	}
+
+</script>
+</body>
+</html>
